@@ -1220,3 +1220,75 @@ Name: target, Length: 135493, dtype: float64, ml_usecase=classification, availab
 2022-10-05 00:53:15,835:INFO:Declaring preprocessing parameters
 2022-10-05 00:53:15,873:INFO:Setting up iterative imputation
 2022-10-05 00:53:16,031:INFO:Creating preprocessing pipeline
+2022-10-05 00:53:16,653:INFO:Preprocessing pipeline created successfully
+2022-10-05 00:53:16,653:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-10-05 00:53:16,653:INFO:Creating global containers
+2022-10-05 00:53:16,655:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2022-10-05 00:53:25,905:INFO:Iterative Imputation: 1 cycle | new_index
+2022-10-05 00:53:33,885:INFO:Iterative Imputation: 1 cycle | old_index
+2022-10-05 00:53:42,014:INFO:Iterative Imputation: 1 cycle | consommation_level_4
+2022-10-05 00:53:49,927:INFO:Iterative Imputation: 1 cycle | consommation_level_3
+2022-10-05 00:53:58,085:INFO:Iterative Imputation: 1 cycle | consommation_level_2
+2022-10-05 00:54:06,274:INFO:Iterative Imputation: 1 cycle | consommation_level_1
+2022-10-05 00:54:14,616:INFO:Iterative Imputation: 1 cycle | reading_remarque
+2022-10-05 00:54:25,373:INFO:Iterative Imputation: 1 cycle | months_number
+2022-10-05 00:54:33,305:INFO:Iterative Imputation: 1 cycle | counter_code
+2022-10-05 00:54:41,325:INFO:Iterative Imputation: 1 cycle | counter_statue
+2022-10-05 00:54:52,988:INFO:Iterative Imputation: 1 cycle | counter_number
+2022-10-05 00:55:00,681:INFO:Iterative Imputation: 1 cycle | tarif_type
+2022-10-05 00:55:15,524:INFO:Iterative Imputation: 1 cycle | counter_coefficient
+2022-10-05 00:55:28,080:INFO:Iterative Imputation: 1 cycle | counter_type
+2022-10-05 00:55:36,209:INFO:Iterative Imputation: 2 cycle | new_index
+2022-10-05 00:55:44,161:INFO:Iterative Imputation: 2 cycle | old_index
+2022-10-05 00:55:51,878:INFO:Iterative Imputation: 2 cycle | consommation_level_4
+2022-10-05 00:55:59,596:INFO:Iterative Imputation: 2 cycle | consommation_level_3
+2022-10-05 00:56:07,408:INFO:Iterative Imputation: 2 cycle | consommation_level_2
+2022-10-05 00:56:15,134:INFO:Iterative Imputation: 2 cycle | consommation_level_1
+2022-10-05 00:56:22,893:INFO:Iterative Imputation: 2 cycle | reading_remarque
+2022-10-05 00:56:33,024:INFO:Iterative Imputation: 2 cycle | months_number
+2022-10-05 00:56:40,749:INFO:Iterative Imputation: 2 cycle | counter_code
+2022-10-05 00:56:48,823:INFO:Iterative Imputation: 2 cycle | counter_statue
+2022-10-05 00:57:00,532:INFO:Iterative Imputation: 2 cycle | counter_number
+2022-10-05 00:57:08,425:INFO:Iterative Imputation: 2 cycle | tarif_type
+2022-10-05 00:57:22,536:INFO:Iterative Imputation: 2 cycle | counter_coefficient
+2022-10-05 00:57:35,178:INFO:Iterative Imputation: 2 cycle | counter_type
+2022-10-05 00:57:43,171:INFO:Iterative Imputation: 3 cycle | new_index
+2022-10-05 00:57:50,947:INFO:Iterative Imputation: 3 cycle | old_index
+2022-10-05 00:57:58,687:INFO:Iterative Imputation: 3 cycle | consommation_level_4
+2022-10-05 00:58:06,394:INFO:Iterative Imputation: 3 cycle | consommation_level_3
+2022-10-05 00:58:14,172:INFO:Iterative Imputation: 3 cycle | consommation_level_2
+2022-10-05 00:58:21,879:INFO:Iterative Imputation: 3 cycle | consommation_level_1
+2022-10-05 00:58:29,736:INFO:Iterative Imputation: 3 cycle | reading_remarque
+2022-10-05 00:58:40,078:INFO:Iterative Imputation: 3 cycle | months_number
+2022-10-05 00:58:47,972:INFO:Iterative Imputation: 3 cycle | counter_code
+2022-10-05 00:58:55,953:INFO:Iterative Imputation: 3 cycle | counter_statue
+2022-10-05 00:59:07,489:INFO:Iterative Imputation: 3 cycle | counter_number
+2022-10-05 00:59:15,373:INFO:Iterative Imputation: 3 cycle | tarif_type
+2022-10-05 00:59:29,754:INFO:Iterative Imputation: 3 cycle | counter_coefficient
+2022-10-05 00:59:42,148:INFO:Iterative Imputation: 3 cycle | counter_type
+2022-10-05 00:59:50,241:INFO:Iterative Imputation: 4 cycle | new_index
+2022-10-05 00:59:58,174:INFO:Iterative Imputation: 4 cycle | old_index
+2022-10-05 01:00:06,115:INFO:Iterative Imputation: 4 cycle | consommation_level_4
+2022-10-05 01:00:13,997:INFO:Iterative Imputation: 4 cycle | consommation_level_3
+2022-10-05 01:00:21,913:INFO:Iterative Imputation: 4 cycle | consommation_level_2
+2022-10-05 01:00:29,882:INFO:Iterative Imputation: 4 cycle | consommation_level_1
+2022-10-05 01:00:37,990:INFO:Iterative Imputation: 4 cycle | reading_remarque
+2022-10-05 01:00:48,407:INFO:Iterative Imputation: 4 cycle | months_number
+2022-10-05 01:00:56,232:INFO:Iterative Imputation: 4 cycle | counter_code
+2022-10-05 01:01:04,241:INFO:Iterative Imputation: 4 cycle | counter_statue
+2022-10-05 01:01:15,767:INFO:Iterative Imputation: 4 cycle | counter_number
+2022-10-05 01:01:23,656:INFO:Iterative Imputation: 4 cycle | tarif_type
+2022-10-05 01:01:38,477:INFO:Iterative Imputation: 4 cycle | counter_coefficient
+2022-10-05 01:01:51,147:INFO:Iterative Imputation: 4 cycle | counter_type
+2022-10-05 01:01:59,389:INFO:Iterative Imputation: 5 cycle | new_index
+2022-10-05 01:02:07,441:INFO:Iterative Imputation: 5 cycle | old_index
+2022-10-05 01:02:15,441:INFO:Iterative Imputation: 5 cycle | consommation_level_4
+2022-10-05 01:02:23,485:INFO:Iterative Imputation: 5 cycle | consommation_level_3
+2022-10-05 01:02:31,624:INFO:Iterative Imputation: 5 cycle | consommation_level_2
+2022-10-05 01:02:39,580:INFO:Iterative Imputation: 5 cycle | consommation_level_1
+2022-10-05 01:02:47,596:INFO:Iterative Imputation: 5 cycle | reading_remarque
+2022-10-05 01:02:57,870:INFO:Iterative Imputation: 5 cycle | months_number
+2022-10-05 01:03:05,784:INFO:Iterative Imputation: 5 cycle | counter_code
+2022-10-05 01:03:14,079:INFO:Iterative Imputation: 5 cycle | counter_statue
+2022-10-05 01:03:25,860:INFO:Iterative Imputation: 5 cycle | counter_number
+2022-10-05 01:03:34,049:INFO:Iterative Imputation: 5 cycle | tarif_type
