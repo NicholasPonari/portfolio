@@ -1,1 +1,1 @@
-/mnt/c/Users/Nick_/Desktop/Coding\ Projects/portfolio/Rust\ -\ Invaders\ Project/invaders/target/release/invaders: /mnt/c/Users/Nick_/Desktop/Coding\ Projects/portfolio/Rust\ -\ Invaders\ Project/invaders/src/main.rs
+C:\Users\Nick_\Desktop\Coding\ Projects\portfolio\Rust\ Projects\ -\ Rust\ Practice\invaders\target\release\invaders.exe: C:\Users\Nick_\Desktop\Coding\ Projects\portfolio\Rust\ Projects\ -\ Rust\ Practice\invaders\src\main.rs
