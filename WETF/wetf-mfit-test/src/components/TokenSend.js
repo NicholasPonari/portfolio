@@ -33,12 +33,16 @@ const TokenSend = (props) => {
   return (
     <Card style={{ background: "rgba(227, 104, 222, 0.71)" }}>
       <Card.Body>
-        <Card.Subtitle> send faucet to an address</Card.Subtitle>
+        <Card.Subtitle>
+          {" "}
+          How many tokens would you like to invest in this round of votes? The
+          amount will be sent to the voting wallet listed below:
+        </Card.Subtitle>
         <br></br>
         <div className="d-grid gap-2">
           <input
             onChange={(e) => setUserAccount(e.target.value)}
-            placeholder="Payee 0x address"
+            placeholder="0x074606aEFC0f56BB3102440E264Fb7424cBA1994"
           />
           <input
             onChange={(e) => setAmount(e.target.value)}

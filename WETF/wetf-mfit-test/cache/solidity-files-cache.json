@@ -148,8 +148,8 @@
       ]
     },
     "C:\\Users\\Nick_\\Desktop\\Coding Projects\\portfolio\\WETF\\wetf-mfit-test\\contracts\\wetftoken.sol": {
-      "lastModificationDate": 1668663806313,
-      "contentHash": "b74e076d0d63bd082c5b377f671f5624",
+      "lastModificationDate": 1669063835287,
+      "contentHash": "7eec99169748e118276eae9ec9d4ae11",
       "sourceName": "contracts/wetftoken.sol",
       "solcConfig": {
         "version": "0.8.3",
