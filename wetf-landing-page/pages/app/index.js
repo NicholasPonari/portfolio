@@ -2,12 +2,12 @@ import "./App.css";
 import WETFToken from "./artifacts/contracts/wetftoken.sol/WETFToken.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
-import Faucet from "./components/Faucet.js";
-import Stock from "./components/Stock";
-import TokenSend from "./components/TokenSend.js";
+import Faucet from "../../components/appcomponents/Faucet.js";
+import Stock from "../../components/appcomponents/Stock";
+import TokenSend from "../../components/appcomponents/TokenSend.js";
+import Poll from "../../components/appcomponents/Poll";
 import { useState } from "react";
 import { ethers } from "ethers";
-import Poll from "./components/Poll";
 
 function App() {
   // properties

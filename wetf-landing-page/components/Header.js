@@ -51,7 +51,7 @@ const Header = () => {
                 <NavLink href="#about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="http:\\app.wetf.space">Launch App</NavLink>
+                <NavLink href="/app">Launch App</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
