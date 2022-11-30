@@ -3,10 +3,10 @@ import "react-leaf-polls/dist/index.css";
 
 // Persistent data array (typically fetched from the server)
 const resData = [
-  { id: 0, text: "Microsoft $204.20/share", votes: 0 },
-  { id: 1, text: "Tesla $50.53/share", votes: 0 },
-  { id: 2, text: "Netflix $30.40/share", votes: 0 },
-  { id: 3, text: "Apple 353.53/share", votes: 0 },
+  { id: 0, text: "Google USD$241.76/share", votes: 5 },
+  { id: 1, text: "Tesla USD$182.92/share", votes: 3 },
+  { id: 2, text: "Netflix USD$281.17/share", votes: 7 },
+  { id: 3, text: "Apple USD$144.22/share", votes: 18 },
 ];
 
 // Object keys may vary on the poll type (see the 'Theme options' table below)
@@ -26,7 +26,8 @@ const Poll = () => {
   return (
     <LeafPoll
       type="multiple"
-      question="Choose the stock that will perform best for the current week"
+      question="Choose the security that you believe will perform the best for the
+      week of December 5th, 2022"
       results={resData}
       theme={customTheme}
       onVote={vote}

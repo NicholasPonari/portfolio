@@ -1,26 +1,9 @@
-import React from "react";
-
-class Stock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      stockChartXValues: [],
-      stockChartYValues: [],
-    };
-  }
-
-  componentDidMount() {
-    this.fetchStock();
-  }
-
-  fetchStock() {}
-
-  render() {
-    return (
-      <div>
-        <h1>Securities:</h1>
-      </div>
-    );
-  }
-}
+const Stock = ({ stock, price }) => {
+  return (
+    <div class="stock">
+      <h2>{stock}</h2>
+      <p>${price}</p>
+    </div>
+  );
+};
 export default Stock;

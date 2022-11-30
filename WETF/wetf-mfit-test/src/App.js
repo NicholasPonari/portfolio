@@ -3,11 +3,13 @@ import WETFToken from "./artifacts/contracts/wetftoken.sol/WETFToken.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Faucet from "./components/Faucet.js";
-import Stock from "./components/Stock";
 import TokenSend from "./components/TokenSend.js";
 import { useState } from "react";
 import { ethers } from "ethers";
 import Poll from "./components/Poll";
+import StockContainer from "./containers/StockContainer";
+
+const stocks = ["GOOG", "TSLA", "NFLX", "AAPL"];
 
 function App() {
   // properties
@@ -48,20 +50,14 @@ function App() {
         <Row>
           <header className="App-header">
             <button onClick={requestAccount}>Connect Wallet</button>
-            <h3>This is your Wallet Address: {walletAddress} </h3>
+            <h4>This is your Wallet Address: {walletAddress} </h4>
           </header>
         </Row>
         <Row className="justify-content-md-center">
           <Faucet tokenContract={Token} />;
         </Row>
         <Row>
-          <h1>It's voting time!</h1>
-        </Row>
-        <Row>
-          <h2>Which security do you believe will perform the best?</h2>
-        </Row>
-        <Row>
-          <Stock></Stock>
+          <h1>Cast your vote!</h1>
         </Row>
         <Row>
           <Poll />
@@ -69,6 +65,14 @@ function App() {
         <Row>
           <TokenSend tokenContract={Token} />
         </Row>
+        <Row>
+          <div class="stocks">
+            {stocks.map((stock) => (
+              <StockContainer key={stock} stock={stock} />
+            ))}
+          </div>
+        </Row>
+        <Row></Row>
       </Container>
     </div>
   );
