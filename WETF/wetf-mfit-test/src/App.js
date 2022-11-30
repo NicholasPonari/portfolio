@@ -8,6 +8,9 @@ import { useState } from "react";
 import { ethers } from "ethers";
 import Poll from "./components/Poll";
 import StockContainer from "./containers/StockContainer";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import { Chart } from "react-google-charts";
 
 const stocks = ["GOOG", "TSLA", "NFLX", "AAPL"];
 
@@ -44,6 +47,23 @@ function App() {
     }
   }
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const data = [
+    ["Security", "Allocation"],
+    ["Google", 14],
+    ["Tesla", 8],
+    ["NetFlix", 20],
+    ["Apple", 55],
+  ];
+
+  const options = {
+    title: "Portfolio Breakdown: Week of December 4, 2022",
+  };
+
   return (
     <div className="App">
       <Container>
@@ -66,13 +86,63 @@ function App() {
           <TokenSend tokenContract={Token} />
         </Row>
         <Row>
+          <p>Live, Updating Stock Quotes</p>
           <div class="stocks">
             {stocks.map((stock) => (
               <StockContainer key={stock} stock={stock} />
             ))}
           </div>
         </Row>
-        <Row></Row>
+        <Row>
+          <Button variant="primary" onClick={handleShow}>
+            Show me the results!
+          </Button>
+
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>This week's Portfolio Allocation</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Row>
+                    You have invested 500 WETF Tokens! Your tokens are LOCKED
+              </Row>
+              <Row>    until December 11, 2022.</Row>
+              <Row> </Row>
+              <Row>
+                    This round, a total of 9,500 WETF Tokens were invested!
+              </Row>
+              <Row> </Row>
+              <Row>
+                    Total Net Invested Asset Value of $1,909,513.93 USD.
+              </Row>
+              <Row> </Row>
+              <Row>
+                    Net Investable Assets in Treasury: $2,750,797.82 USD
+              </Row>
+              <Row> </Row>
+              <Row>    Fully Diluted Token Amount: 27,000 Tokens</Row>
+              <Row> </Row>
+              <Row>    Current Value of WETF Token by NAV: $101.88 USD</Row>
+              <Row> </Row>
+              <Row>
+                    WETF will redeem tokens at the above price for cash.
+              </Row>
+              <Row> </Row>
+              <Chart
+                chartType="PieChart"
+                data={data}
+                options={options}
+                width={"100%"}
+                height={"400px"}
+              />
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </Row>
       </Container>
     </div>
   );

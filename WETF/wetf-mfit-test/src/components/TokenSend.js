@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 //contract address
-const tokenAddress = "0x286f42b8E64065331906d38D36d62EEB348FE47d";
+const tokenAddress = "0x5A478a6D8AFFEb35aE96C7E75339152e0d8065AB";
 
 const TokenSend = (props) => {
   const [userAccount, setUserAccount] = useState();
@@ -17,7 +17,9 @@ const TokenSend = (props) => {
 
   async function sendCoins() {
     if (typeof window.ethereum !== "undefined") {
-      await requestAccount();
+      const account = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(
@@ -25,8 +27,12 @@ const TokenSend = (props) => {
         props.tokenContract.abi,
         signer
       );
-      const transation = await contract.transfer(userAccount, amount);
-      await transation.wait();
+      const transaction = await contract.vote(
+        account[0],
+        "0x074606aEFC0f56BB3102440E264Fb7424cBA1994",
+        "500000000000000000000"
+      );
+      await transaction.wait();
       console.log(`${amount} Coins successfully sent to ${userAccount}`);
     }
   }
@@ -36,7 +42,7 @@ const TokenSend = (props) => {
         <Card.Subtitle>
           {" "}
           How many tokens would you like to invest in this round of votes? The
-          amount will be sent to the voting wallet listed below:
+          amount will be sent to the DAO Contract Wallet listed below:
         </Card.Subtitle>
         <br></br>
         <div className="d-grid gap-2">
