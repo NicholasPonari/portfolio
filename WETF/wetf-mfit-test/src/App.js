@@ -7,12 +7,9 @@ import TokenSend from "./components/TokenSend.js";
 import { useState } from "react";
 import { ethers } from "ethers";
 import Poll from "./components/Poll";
-import StockContainer from "./containers/StockContainer";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { Chart } from "react-google-charts";
-
-const stocks = ["GOOG", "TSLA", "NFLX", "AAPL"];
 
 function App() {
   // properties
@@ -84,14 +81,6 @@ function App() {
         </Row>
         <Row>
           <TokenSend tokenContract={Token} />
-        </Row>
-        <Row>
-          <p>Live, Updating Stock Quotes</p>
-          <div class="stocks">
-            {stocks.map((stock) => (
-              <StockContainer key={stock} stock={stock} />
-            ))}
-          </div>
         </Row>
         <Row>
           <Button variant="primary" onClick={handleShow}>

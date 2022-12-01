@@ -4,6 +4,7 @@ const getPrice = async (stock) => {
   );
   const stockInfo = await response.text();
   const stockPrice = JSON.parse(stockInfo);
+
   return stockPrice[0]["previousClose"];
 };
 

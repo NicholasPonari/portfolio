@@ -1,13 +1,7 @@
 import { LeafPoll, Result } from "react-leaf-polls";
 import "react-leaf-polls/dist/index.css";
-
+import getPrice from "../services/Price";
 // Persistent data array (typically fetched from the server)
-const resData = [
-  { id: 0, text: "Google USD$241.76/share", votes: 5 },
-  { id: 1, text: "Tesla USD$182.92/share", votes: 3 },
-  { id: 2, text: "Netflix USD$281.17/share", votes: 7 },
-  { id: 3, text: "Apple USD$144.22/share", votes: 18 },
-];
 
 // Object keys may vary on the poll type (see the 'Theme options' table below)
 const customTheme = {
@@ -23,6 +17,52 @@ function vote(item, results) {
 }
 
 const Poll = () => {
+  let stocks = [
+    {
+      id: 0,
+      ticker: "GOOG",
+      name: "Google",
+      voteCount: 5,
+      price: 0,
+    },
+    {
+      id: 1,
+      ticker: "TSLA",
+      name: "Tesla",
+      voteCount: 15,
+      price: 0,
+    },
+    {
+      id: 2,
+      ticker: "NFLX",
+      name: "Netflix",
+      voteCount: 3,
+      price: 0,
+    },
+    {
+      id: 3,
+      ticker: "AAPL",
+      name: "Apple",
+      voteCount: 1,
+      price: 0,
+    },
+  ];
+
+  stocks.forEach((stock) => {
+    getPrice(stock.ticker).then((val) => {
+      stock.price = val;
+    });
+  });
+
+  let resData = [];
+  stocks.forEach((stock) => {
+    resData.push({
+      id: stock.id,
+      text: `${stock.name} USD $${stock.price}/share`,
+      votes: stock.voteCount,
+    });
+  });
+
   return (
     <LeafPoll
       type="multiple"
